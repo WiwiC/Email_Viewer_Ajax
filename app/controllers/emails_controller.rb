@@ -19,7 +19,7 @@ class EmailsController < ApplicationController
 
   # GET /emails/new
   def new
-    
+    @email = Email.new
   end
 
   # GET /emails/1/edit
