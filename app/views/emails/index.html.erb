@@ -1,0 +1,34 @@
+<p id="notice">
+    <%= notice %>
+</p>
+<h1>Emails</h1>
+
+<%= link_to 'New Email', new_email_path %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 bg-primary">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Mail box</th>
+                        <th colspan="3"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @emails.each do |email| %>
+                        <tr>
+                            <td>
+                                <%= link_to email.object, email, class:"objet" %>
+                            </td>
+                            <!-- <td><%= link_to 'Destroy', email, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+                        </tr>
+                        <% end %>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-9 bg-warning email-content">
+          
+        </div>
+    </div>
+</div>
