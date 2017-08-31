@@ -1,0 +1,11 @@
+<% if @emails.any? %>
+    <% @emails.each do |email| %>
+        <tr>
+            <td class="">
+                <%= link_to email.object, email, :remote => true, class:"objet" %>
+            </td>
+        </tr>
+    <% end %> 
+<% else %>
+    <p>No emails yet</p>
+<% end %>

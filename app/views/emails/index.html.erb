@@ -13,14 +13,8 @@
                         <th colspan="3"></th>
                     </tr>
                 </thead>
-                <tbody>
-                    <% @emails.each do |email| %>
-                        <tr>
-                            <td class="">
-                                <%= link_to email.object, email, :remote => true, class:"objet" %>
-                            </td>
-                        </tr>
-                        <% end %>
+                <tbody id="emails">
+                    <%= render 'emails/index' %>
                 </tbody>
             </table>
         </div>
