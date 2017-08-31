@@ -10,7 +10,11 @@ class EmailsController < ApplicationController
   # GET /emails/1
   # GET /emails/1.json
   def show
-    @email = Email.find(params[])
+    @email = Email.find(params[:id])
+    respond_to do |format|
+      format.html # show.html.erb
+      format.js
+    end
   end
 
   # GET /emails/new
