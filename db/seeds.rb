@@ -8,9 +8,7 @@
 
 20.times do |n|
   objet  = Faker::Lorem.sentence(1)
-  paraph1 = Faker::Lorem.paragraph(2)
-  paraph2 = Faker::Lorem.paragraph(2)
-  paraph3 = Faker::Lorem.paragraph(2)
+  paraph = Faker::Lorem.paragraph(10)
   e = Email.create!(object:  objet,
-              body: '<p>'+paraph1+'</p><p>'+paraph2+'</p><p>'+paraph3+'</p>')
+              body: paraph)
 end
